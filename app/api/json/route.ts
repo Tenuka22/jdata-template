@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import { ZodTypeAny, z } from "zod";
 
-export const EXAMPLE_PROMPT = `DATA: \n"John is 25 years old and studies computer science at university"\n\n-----------\nExpected JSON format: 
+const EXAMPLE_PROMPT = `DATA: \n"John is 25 years old and studies computer science at university"\n\n-----------\nExpected JSON format: 
 {
   name: { type: "string" },
   age: { type: "number" },
@@ -14,7 +14,7 @@ export const EXAMPLE_PROMPT = `DATA: \n"John is 25 years old and studies compute
 }
 \n\n-----------\nValid JSON output in expected format:`;
 
-export const EXAMPLE_ANSWER = `{
+const EXAMPLE_ANSWER = `{
 name: "John",
 age: 25,
 isStudent: true,
